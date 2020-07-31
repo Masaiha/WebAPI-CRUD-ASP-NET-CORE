@@ -1,0 +1,12 @@
+C:\Users\Masanori\Documents\GitHub\WebAPI-CRUD-ASP-NET-CORE\src\DevIO.Data\bin\Debug\netcoreapp2.2\DevIO.Data.deps.json
+C:\Users\Masanori\Documents\GitHub\WebAPI-CRUD-ASP-NET-CORE\src\DevIO.Data\bin\Debug\netcoreapp2.2\DevIO.Data.dll
+C:\Users\Masanori\Documents\GitHub\WebAPI-CRUD-ASP-NET-CORE\src\DevIO.Data\bin\Debug\netcoreapp2.2\DevIO.Data.pdb
+C:\Users\Masanori\Documents\GitHub\WebAPI-CRUD-ASP-NET-CORE\src\DevIO.Data\bin\Debug\netcoreapp2.2\DevIO.Business.dll
+C:\Users\Masanori\Documents\GitHub\WebAPI-CRUD-ASP-NET-CORE\src\DevIO.Data\bin\Debug\netcoreapp2.2\DevIO.Business.pdb
+C:\Users\Masanori\Documents\GitHub\WebAPI-CRUD-ASP-NET-CORE\src\DevIO.Data\obj\Debug\netcoreapp2.2\DevIO.Data.csprojAssemblyReference.cache
+C:\Users\Masanori\Documents\GitHub\WebAPI-CRUD-ASP-NET-CORE\src\DevIO.Data\obj\Debug\netcoreapp2.2\DevIO.Data.AssemblyInfoInputs.cache
+C:\Users\Masanori\Documents\GitHub\WebAPI-CRUD-ASP-NET-CORE\src\DevIO.Data\obj\Debug\netcoreapp2.2\DevIO.Data.AssemblyInfo.cs
+C:\Users\Masanori\Documents\GitHub\WebAPI-CRUD-ASP-NET-CORE\src\DevIO.Data\obj\Debug\netcoreapp2.2\DevIO.Data.csproj.CoreCompileInputs.cache
+C:\Users\Masanori\Documents\GitHub\WebAPI-CRUD-ASP-NET-CORE\src\DevIO.Data\obj\Debug\netcoreapp2.2\DevIO.Data.csproj.CopyComplete
+C:\Users\Masanori\Documents\GitHub\WebAPI-CRUD-ASP-NET-CORE\src\DevIO.Data\obj\Debug\netcoreapp2.2\DevIO.Data.dll
+C:\Users\Masanori\Documents\GitHub\WebAPI-CRUD-ASP-NET-CORE\src\DevIO.Data\obj\Debug\netcoreapp2.2\DevIO.Data.pdb
