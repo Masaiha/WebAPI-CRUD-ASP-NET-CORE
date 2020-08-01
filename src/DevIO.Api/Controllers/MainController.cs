@@ -1,5 +1,6 @@
 ﻿using DevIO.Business.Intefaces;
 using DevIO.Business.Notificacoes;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System;
@@ -7,6 +8,7 @@ using System.Linq;
 
 namespace DevIO.Api.Controllers
 {
+    [Authorize]
     [ApiController]
     public abstract class MainController : ControllerBase
     {
