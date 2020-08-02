@@ -1,4 +1,4 @@
-﻿namespace DevIO.Api.ViewModels.Identity
+﻿namespace DevIO.Api.ViewModels
 {
     public class ClaimViewModel
     {

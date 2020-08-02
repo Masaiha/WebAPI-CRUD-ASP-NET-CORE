@@ -24,7 +24,7 @@ namespace DevIO.Api.Configurations
                 .AddErrorDescriber<IdentityMensagensPortugues>()
                 .AddDefaultTokenProviders();
 
-            //// JWT
+            #region JWT
 
             var appSettingsSection = configuration.GetSection("AppSettings");
             services.Configure<AppSettings>(appSettingsSection);
@@ -55,7 +55,8 @@ namespace DevIO.Api.Configurations
             });
 
             return services;
-        }
 
+            #endregion
+        }
     }
 }
