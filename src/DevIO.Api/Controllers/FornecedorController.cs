@@ -11,7 +11,8 @@ using System.Threading.Tasks;
 
 namespace DevIO.Api.Controllers
 {
-    [Route("api/fornecedores")]
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/fornecedores")]
     public class FornecedorController : MainController
     {
         private readonly IFornecedorRepository _fornecedorRepository;
@@ -97,7 +98,7 @@ namespace DevIO.Api.Controllers
         }
 
         [HttpPut("endereco/{id:guid}")]
-        private async Task<IActionResult> AtualizarEndereco(Guid id, EnderecoViewModel enderecoViewModel)
+        public async Task<IActionResult> AtualizarEndereco(Guid id, EnderecoViewModel enderecoViewModel)
         {
             if (id != enderecoViewModel.Id)
             {

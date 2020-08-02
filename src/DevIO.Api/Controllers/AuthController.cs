@@ -16,7 +16,8 @@ using System.Threading.Tasks;
 
 namespace DevIO.Api.Controllers
 {
-    [Route("api/conta")]
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/conta")]
     public class AuthController : MainController
     {
         private readonly SignInManager<IdentityUser> _signInManager;
@@ -63,7 +64,7 @@ namespace DevIO.Api.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPost("entrar")]
+        [HttpPost("login")]
         public async Task<ActionResult> Login(LoginUserViewModel loginUserViewModel)
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
