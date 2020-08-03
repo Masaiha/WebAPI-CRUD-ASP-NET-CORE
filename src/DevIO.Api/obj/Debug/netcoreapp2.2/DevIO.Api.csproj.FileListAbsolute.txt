@@ -1,5 +1,9 @@
+C:\Users\Masanori\Documents\GitHub\WebAPI-CRUD-ASP-NET-CORE\src\DevIO.Api\bin\Debug\netcoreapp2.2\appsettings.Development.Development.json
 C:\Users\Masanori\Documents\GitHub\WebAPI-CRUD-ASP-NET-CORE\src\DevIO.Api\bin\Debug\netcoreapp2.2\appsettings.Development.json
-C:\Users\Masanori\Documents\GitHub\WebAPI-CRUD-ASP-NET-CORE\src\DevIO.Api\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\Masanori\Documents\GitHub\WebAPI-CRUD-ASP-NET-CORE\src\DevIO.Api\bin\Debug\netcoreapp2.2\appsettings.Production.Development.json
+C:\Users\Masanori\Documents\GitHub\WebAPI-CRUD-ASP-NET-CORE\src\DevIO.Api\bin\Debug\netcoreapp2.2\appsettings.Production.json
+C:\Users\Masanori\Documents\GitHub\WebAPI-CRUD-ASP-NET-CORE\src\DevIO.Api\bin\Debug\netcoreapp2.2\appsettings.Staging.Development.json
+C:\Users\Masanori\Documents\GitHub\WebAPI-CRUD-ASP-NET-CORE\src\DevIO.Api\bin\Debug\netcoreapp2.2\appsettings.Staging.json
 C:\Users\Masanori\Documents\GitHub\WebAPI-CRUD-ASP-NET-CORE\src\DevIO.Api\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
 C:\Users\Masanori\Documents\GitHub\WebAPI-CRUD-ASP-NET-CORE\src\DevIO.Api\bin\Debug\netcoreapp2.2\DevIO.Api.deps.json
 C:\Users\Masanori\Documents\GitHub\WebAPI-CRUD-ASP-NET-CORE\src\DevIO.Api\bin\Debug\netcoreapp2.2\DevIO.Api.runtimeconfig.json
@@ -20,4 +24,5 @@ C:\Users\Masanori\Documents\GitHub\WebAPI-CRUD-ASP-NET-CORE\src\DevIO.Api\obj\De
 C:\Users\Masanori\Documents\GitHub\WebAPI-CRUD-ASP-NET-CORE\src\DevIO.Api\obj\Debug\netcoreapp2.2\DevIO.Api.dll
 C:\Users\Masanori\Documents\GitHub\WebAPI-CRUD-ASP-NET-CORE\src\DevIO.Api\obj\Debug\netcoreapp2.2\DevIO.Api.pdb
 C:\Users\Masanori\Documents\GitHub\WebAPI-CRUD-ASP-NET-CORE\src\DevIO.Api\obj\Debug\netcoreapp2.2\DevIO.Api.genruntimeconfig.cache
+C:\Users\Masanori\Documents\GitHub\WebAPI-CRUD-ASP-NET-CORE\src\DevIO.Api\bin\Debug\netcoreapp2.2\appsettings.json
 C:\Users\Masanori\Documents\GitHub\WebAPI-CRUD-ASP-NET-CORE\src\DevIO.Api\obj\Debug\netcoreapp2.2\DevIO.Api.csproj.CoreCompileInputs.cache

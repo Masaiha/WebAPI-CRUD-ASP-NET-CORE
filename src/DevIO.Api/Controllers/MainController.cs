@@ -9,7 +9,6 @@ using System.Linq;
 namespace DevIO.Api.Controllers
 {
     [ApiVersion("1.0")]
-    [Authorize]
     [ApiController]
     public abstract class MainController : ControllerBase
     {

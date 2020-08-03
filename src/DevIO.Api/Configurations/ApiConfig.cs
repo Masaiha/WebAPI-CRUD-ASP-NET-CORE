@@ -19,7 +19,7 @@ namespace DevIO.Api.Configurations
             services.AddApiVersioning(options =>
             {
                 options.AssumeDefaultVersionWhenUnspecified = true;
-                options.DefaultApiVersion = new ApiVersion(1, 0);
+                options.DefaultApiVersion = new ApiVersion(1,0);
                 options.ReportApiVersions = true;
             });
 
@@ -50,12 +50,10 @@ namespace DevIO.Api.Configurations
 
         public static IApplicationBuilder UseMvcConfiguration(this IApplicationBuilder app)
         {
-            app.UseCors("Development");
             app.UseHttpsRedirection();
             app.UseMvc();
 
             return app;
         }
-
     }
 }

@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
+using DevIO.Api.Extensions;
 using DevIO.Api.ViewModels;
 using DevIO.Business.Intefaces;
 using DevIO.Business.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -11,6 +13,7 @@ using System.Threading.Tasks;
 
 namespace DevIO.Api.Controllers
 {
+    [Authorize]
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}/produtos")]
     public class ProdutosController : MainController
@@ -21,7 +24,8 @@ namespace DevIO.Api.Controllers
 
         public ProdutosController(IProdutoRepository produtoRepository,
                                   IMapper mapper,
-                                  INotificador notificador, IProdutoService produtoService) : base(notificador)
+                                  INotificador notificador, 
+                                  IProdutoService produtoService) : base(notificador)
         {
             _produtoRepository = produtoRepository;
             _mapper = mapper;
@@ -44,33 +48,33 @@ namespace DevIO.Api.Controllers
             return CustomResponse(produtoViewModel);
         }
 
-        [HttpPost]
         [RequestSizeLimit(40000000)]
+        [HttpPost]
         public async Task<ActionResult<ProdutoViewModel>> Adicionar(ProdutoViewModel produtoViewModel)
         {
-            var prefixo = Guid.NewGuid() + "_";
+            if (!ModelState.IsValid) return CustomResponse(ModelState);
 
-            if(!await UploadArquivo(produtoViewModel.ImagemUpload, prefixo))
+            var prefixo = Guid.NewGuid() + "_";
+            if (!await UploadArquivo(produtoViewModel.ImagemUpload, prefixo))
             {
                 return CustomResponse(produtoViewModel);
             }
 
-            if (!ModelState.IsValid) return CustomResponse(produtoViewModel);
-
             produtoViewModel.Imagem = prefixo + produtoViewModel.ImagemUpload.FileName;
-            await _produtoRepository.Adicionar(_mapper.Map<Produto>(produtoViewModel));
+            await _produtoService.Adicionar(_mapper.Map<Produto>(produtoViewModel));
 
             return CustomResponse(produtoViewModel);
         }
 
-        [HttpPut("{id:guid}")]
+        [ClaimsAuthorize("Produto", "Atualizar")]
         [RequestSizeLimit(40000000)]
-        public async Task<ActionResult<ProdutoViewModel>> Atualizar(Guid id, ProdutoViewModel produtoViewModel)
+        [HttpPut("{id:guid}")]
+        public async Task<IActionResult> Atualizar(Guid id, ProdutoViewModel produtoViewModel)
         {
             if (id != produtoViewModel.Id)
             {
                 NotificarErro("O ID enviado é diferente do Id do produto");
-                return CustomResponse(produtoViewModel);
+                return CustomResponse();
             }
 
             var produtoAtualizacao = await ObterProdutoPorId(id);
@@ -100,8 +104,9 @@ namespace DevIO.Api.Controllers
             return CustomResponse(produtoViewModel);
         }
 
+        [ClaimsAuthorize("Produto", "Excluir")]
         [HttpDelete("{id:guid}")]
-        public async Task<ActionResult<Produto>> Excluir(Guid id)
+        public async Task<ActionResult<ProdutoViewModel>> Excluir(Guid id)
         {
             var produtoViewModel = await ObterProdutoPorId(id);
 
@@ -116,7 +121,7 @@ namespace DevIO.Api.Controllers
         {
             if (arquivo == null || arquivo.Length == 0)
             {
-                ModelState.AddModelError(string.Empty, "Forneça uma imagem para este produto");
+                NotificarErro("Forneça uma imagem para este produto");
                 return false;
             }
 
@@ -151,7 +156,7 @@ namespace DevIO.Api.Controllers
             return true;
         }
 
-        public async Task<ProdutoViewModel> ObterProdutoPorId(Guid id)
+        private async Task<ProdutoViewModel> ObterProdutoPorId(Guid id)
         {
             return _mapper.Map<ProdutoViewModel>(await _produtoRepository.ObterProdutoFornecedor(id));
         }
